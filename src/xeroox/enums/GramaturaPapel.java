@@ -1,0 +1,8 @@
+package xeroox.enums;
+
+public enum GramaturaPapel {
+	GRAMATURA_30_A_63_GRAMAS,
+	GRAMATURA_75_A_120_GRAMAS,
+	GRAMATURA_120_A_240_GRAMAS,
+	GRAMATURA_250_A_350_GRAMAS;
+}
