@@ -41,7 +41,7 @@ public class FuncionarioBusiness implements BaseBusiness<Funcionario> {
 				return (Funcionario) object;
 			}
 			
-			return (Funcionario) object;
+			return (Funcionario) funcionario;
 		});
 	}
 
