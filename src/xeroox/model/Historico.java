@@ -3,7 +3,7 @@ package xeroox.model;
 import java.util.ArrayList;
 
 public class Historico {
-	private ArrayList<Venda> vendas;
+	private ArrayList<Venda> vendas = new ArrayList<Venda>();
 	
 	public Historico() {
 		

@@ -1,18 +1,15 @@
 package xeroox.model;
 
-import xeroox.enums.CorPapel;
-import xeroox.enums.FormatoPapel;
-import xeroox.enums.GramaturaPapel;
-import xeroox.enums.TipoPapel;
-
 public class Papel {
-	private TipoPapel tipo;
-	private FormatoPapel formato;
-	private GramaturaPapel gramatura;
-	private CorPapel cor;
+	private String id;
+	private String tipo;
+	private String formato;
+	private String gramatura;
+	private String cor;
 	private double valor;
 	
-	public Papel (TipoPapel tipo, FormatoPapel formato, GramaturaPapel gramatura, CorPapel cor, double valor) {
+	public Papel (String id, String tipo, String formato, String gramatura, String cor, double valor) {
+		this.id = id;
 		this.tipo = tipo;
 		this.formato = formato;
 		this.gramatura = gramatura;
@@ -20,35 +17,35 @@ public class Papel {
 		this.valor = valor;
 	}
 
-	public TipoPapel getTipo() {
+	public String getTipo() {
 		return tipo;
 	}
 
-	public void setTipo(TipoPapel tipo) {
+	public void setTipo(String tipo) {
 		this.tipo = tipo;
 	}
 
-	public FormatoPapel getFormato() {
+	public String getFormato() {
 		return formato;
 	}
 
-	public void setFormato(FormatoPapel formato) {
+	public void setFormato(String formato) {
 		this.formato = formato;
 	}
 
-	public GramaturaPapel getGramatura() {
+	public String getGramatura() {
 		return gramatura;
 	}
 
-	public void setGramatura(GramaturaPapel gramatura) {
+	public void setGramatura(String gramatura) {
 		this.gramatura = gramatura;
 	}
 
-	public CorPapel getCor() {
+	public String getCor() {
 		return cor;
 	}
 
-	public void setCor(CorPapel cor) {
+	public void setCor(String cor) {
 		this.cor = cor;
 	}
 
@@ -58,5 +55,13 @@ public class Papel {
 
 	public void setValor(double valor) {
 		this.valor = valor;
+	}
+
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
 	}
 }

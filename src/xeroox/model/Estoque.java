@@ -3,7 +3,11 @@ package xeroox.model;
 import java.util.ArrayList;
 
 public class Estoque {
-	ArrayList<ItemEstoque> intensEstoque;
+	ArrayList<ItemEstoque> intensEstoque = new ArrayList<>();
+	
+	public Estoque() {
+		
+	}
 	
 	public Estoque(ArrayList<ItemEstoque> intensEstoque) {
 		this.intensEstoque = intensEstoque;

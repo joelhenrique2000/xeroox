@@ -1,11 +1,13 @@
 package xeroox.model;
 
 public abstract class Usuario {
+	private String id;
 	private String nome;
 	private String sobrenome;
 		
-	public Usuario(String nome, String sobrenome) {
+	public Usuario(String id, String nome, String sobrenome) {
 		super();
+		this.id = id;
 		this.nome = nome;
 		this.sobrenome = sobrenome;
 	}
@@ -28,5 +30,13 @@ public abstract class Usuario {
 	
 	public void setSobrenome(String sobrenome) {
 		this.sobrenome = sobrenome;
+	}
+	
+	public String getId() {
+		return id;
+	}
+	
+	public void setId(String id) {
+		this.id = id;
 	}
 }

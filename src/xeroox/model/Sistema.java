@@ -1,5 +1,6 @@
 package xeroox.model;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 import xeroox.model.interfaces.PontoVenda;
 import xeroox.model.interfaces.Venda;
@@ -10,6 +11,7 @@ public class Sistema implements PontoVenda {
 	private String cnpj;
 	private Estoque estoque;
 	private Historico historico;
+	private Scanner input;
 	
 	public Sistema(String nome, ArrayList<Funcionario> funcionarios, String cnpj, Estoque estoque, Historico historico) {
 		this.nome = nome;
@@ -61,7 +63,41 @@ public class Sistema implements PontoVenda {
 
 	@Override
 	public boolean abrirPDV() {
-		return false;
+		try {
+			
+			/// Variavel para quando for false para de rodar o sistema
+			Boolean loopMenu = true;
+			input = new Scanner(System.in);
+			
+			// loop do menu
+			while (loopMenu) {
+				
+				// Apresentação do menu
+				System.out.print("+------------------------------------------+\n"
+						       + "|                 MENU XEROOX              |\n"
+						       + "+------------------------------------------+\n"
+						       + "| 0. Sair                                  |\n"
+						       + "| 1. Vender                                |\n"
+						       + "| 2. Cadastrar produto no estoque          |\n"
+						       + "| 3. Alterar Informações                   |\n"
+						       + "|                                          |\n"
+						       + "|                                          |\n"
+						       + "|                                          |\n"
+						       + "|                                          |\n"
+						       + "|                                          |\n"
+						       + "+------------------------------------------+\n");
+				
+				// Condição de parada
+				Integer nome = input.nextInt();
+				if (nome == 0) {
+					loopMenu = false;
+				}
+			}
+			
+			return true;
+		} catch (Exception ex) {
+			return false;
+		}
 	}
 
 	@Override

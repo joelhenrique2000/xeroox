@@ -5,8 +5,8 @@ import xeroox.model.interfaces.Venda;
 
 public class Funcionario extends Usuario implements Comissao, Venda {
 	
-	public Funcionario(String nome, String sobrenome, double salario, double comissao) {
-		super(nome, sobrenome);
+	public Funcionario(String id, String nome, String sobrenome, double salario, double comissao) {
+		super(id, nome, sobrenome);
 		this.salario = salario;
 		this.comissao = comissao;
 	}
