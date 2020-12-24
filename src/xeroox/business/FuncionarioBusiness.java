@@ -30,7 +30,6 @@ public class FuncionarioBusiness implements BaseBusiness<Funcionario> {
 		}
 		
 		Funcionario funcionario = Store.sistema.getFuncionarios().get(posicaoList);
-		System.out.println(">>>>>>>" + funcionario.getNome());
 		return funcionario;
 	}
 
@@ -51,83 +50,3 @@ public class FuncionarioBusiness implements BaseBusiness<Funcionario> {
 	}
 
 }
-
-
-/*
- package xeroox.business;
-
-import java.util.ArrayList;
-
-import xeroox.business.interfaces.BaseBusiness;
-import xeroox.model.Funcionario;
-import xeroox.model.ItemEstoque;
-import xeroox.model.Venda;
-import xerrox.store.Store;
-
-public class BaseController<T> implements BaseBusiness<T> {
- 
-	@Override
-	public void adicionar(T object) {
-		if (object instanceof Funcionario) {
-			Store.sistema.getFuncionarios().add((Funcionario) object);
-		
-		} else if (object instanceof ItemEstoque) {
-			Store.sistema.getEstoque().getItensEstoque().add((ItemEstoque) object);
-		
-		} else if (object instanceof Venda) {
-			Store.sistema.getHistorico().getVendas().add((Venda) object);
-		
-		} else {			
-			System.out.println("Erro interno ao adicionar esse objeto");
-		}
-	}
-
-	@Override
-	public void atualizar(T object) {
-		
-		if (object instanceof Funcionario) {
-			Store.sistema.getFuncionarios().replaceAll(funcionario -> {
-				if (funcionario.getId().equalsIgnoreCase(((Funcionario)object).getId())) {
-					return (Funcionario) object;
-				}
-				
-				return (Funcionario) object;
-			});
-		
-		} else if (object instanceof ItemEstoque) {
-			
-		} else if (object instanceof Venda) {
-			
-		} else {			
-			System.out.println("Erro interno ao adicionar esse objeto");
-		}
-		
-	}
-
-	@Override
-	public Boolean deletar(T object) {
-		if (object instanceof Funcionario) {
-			return Store.sistema.getFuncionarios().removeIf(filter -> filter.getId().equalsIgnoreCase(((Funcionario) object).getId()));
-		} else if (object instanceof ItemEstoque) {
-			return Store.sistema.getEstoque().getItensEstoque().removeIf(filter -> filter.getId().equalsIgnoreCase(((ItemEstoque) object).getId()));
-		} else if (object instanceof Venda) {
-			return false;
-		} else {			
-			return false;
-		}
-	}
-
-	@Override
-	public ArrayList<T> listarTodos() {
-		return (ArrayList<T>) Store.sistema.getFuncionarios();
-	}
-
-	@Override
-	public T listarPorId() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-}
-
- */

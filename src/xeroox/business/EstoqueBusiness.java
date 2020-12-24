@@ -34,12 +34,12 @@ public class EstoqueBusiness implements BaseBusiness<ItemEstoque> {
 
 	@Override
 	public void atualizar(ItemEstoque object) {
-		Store.sistema.getEstoque().getItensEstoque().replaceAll(funcionario -> {
-			if (funcionario.getId().equalsIgnoreCase(((ItemEstoque)object).getId())) {
+		Store.sistema.getEstoque().getItensEstoque().replaceAll(item -> {
+			if (item.getId().equalsIgnoreCase(((ItemEstoque)object).getId())) {
 				return (ItemEstoque) object;
 			}
 			
-			return (ItemEstoque) object;
+			return (ItemEstoque) item;
 		});
 	}
 
